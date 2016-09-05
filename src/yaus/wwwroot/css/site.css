@@ -10,29 +10,28 @@
     padding-right: 15px;
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
-
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
-}
-
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"]
-{
+.jumbotron {
+    background: #000 url("../images/science-dude.jpg") center center;
+    position: relative;
     width: 100%;
+    height: 350px;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.header .large-letter {
+    font-size: xx-large;
+}
+
+.fill-sibling-cell {
+    width: 1% !important;
+}
+
+.header .regular-letter {
+    font-size: medium;
 }
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
   /* Hide captions */
-  .carousel-caption {
-    display: none
-  }
 }
