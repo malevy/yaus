@@ -7,7 +7,23 @@ $(function() {
     var $copyButton = $("#copyButton");
 
     $shortenButton.on("click", () => {
-       
+
+        $.ajax({
+            method: 'post',
+            accepts: {
+                json: 'application/json'
+            },
+            contentType: 'application/json',
+            url: createUrl,
+            data: JSON.stringify( {
+                fullUrl: $fullUrl.val()
+            })
+        })
+        .done(function(data) {
+                $shortenUrl.val(data.token);
+        });
+        //TODO - really need to handle errors but...nah
+
     });
 
     $fullUrl.on("keyup", () => {
@@ -16,5 +32,10 @@ $(function() {
 
     $shortenUrl.on("change", () => {
         $copyButton.prop("disabled", $shortenUrl.val() === "");
+        //TODO - show the shorten UI component when a token is available
     });
+
+
+
 });
+

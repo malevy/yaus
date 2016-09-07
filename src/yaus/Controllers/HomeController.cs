@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using yaus.Controllers.api;
 
 namespace yaus.Controllers
 {
@@ -10,6 +11,7 @@ namespace yaus.Controllers
     {
         public IActionResult Index()
         {
+            this.ViewData["CreateUrl"] = this.Url.Link("apiUrl", null);
             return View();
         }
 

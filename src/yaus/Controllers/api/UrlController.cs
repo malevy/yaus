@@ -11,7 +11,7 @@ using yaus.ViewModels.Out;
 
 namespace yaus.Controllers.api
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]", Name = "apiUrl")]
     public class UrlController : Controller
     {
         private readonly ILogger _logger;
