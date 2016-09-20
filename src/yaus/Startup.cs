@@ -56,9 +56,17 @@ namespace yaus
 
             app.UseMvc(routes =>
             {
+                // everything else
                 routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    name: "default", 
+                    template: "{controller=Home}/{action=Index}");
+
+                // when a token is present
+                routes.MapRoute(
+                    name: "hasToken",
+                    template: "{token}",
+                    defaults: new { controller = "Home", action = "WithToken" });
+
             });
         }
     }

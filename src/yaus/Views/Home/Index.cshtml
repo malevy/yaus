@@ -1,6 +1,9 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<div class="jumbotron">
+    <div class="container"></div>
+</div>
 
 <div class="row">
     <div class="col-md-4"></div>
@@ -38,7 +41,7 @@
     <div class="col-md-2"></div>
     <div class="col-md-8">
         <div class="input-group input-group-lg">
-            <input type="text" class="form-control input-lg" id="shortenedUrl" readonly="readonly" />
+            <input type="text" class="form-control input-lg" id="shortenedUrl" readonly="readonly"/>
             <span class="input-group-btn fill-sibling-cell">
                 <button id="copyButton" type="button" class="btn btn-primary btn-sm" disabled="disabled">copy</button>
             </span>
@@ -46,6 +49,10 @@
     </div>
     <div class="col-md-2"></div>
 </div>
+<footer>
+    <p>&copy; 2016 - Michael Levy</p>
+    <p>image: DeGolyer Library, Southern Methodist University</p>
+</footer>
 <script type="text/javascript">
     var createUrl = "@ViewData["CreateUrl"]";
 </script>
